@@ -1,7 +1,8 @@
 import * as tf from '@tensorflow/tfjs';
 import Data from '../testData/testData.js'
+// import Data from './../testData/testData.js';
 
-const async function trainModel = (inputs, outputs, size, window_size, n_epochs, learning_rate, n_layers, callback) => {
+const trainModel = async (inputs, outputs, size, window_size, n_epochs, learning_rate, n_layers, callback) => {
 	const input_layer_shape = window_size;
 	const input_layer_neurons = 100;
 
