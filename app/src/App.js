@@ -9,11 +9,10 @@ import Model from './tensorflow/model.js'
  }
 
 function App() {
-  console.log(Model.trainModel(Data.inputArr, Data.targetArr,12,3, 2, 0.001, 3, null)
-  .then((model) => {
-    console.log(model);
-    Model.Predict(Data.inputArr, 12, model)
-  }));
+	Model.trainModel(Data.inputArr, Data.targetArr, 15, 15, 250, 0.005, 4).then(
+		(wrapper_train) => {
+    console.log(Model.Predict(Data.inputArr, 15, wrapper_train.model))
+  });
   
   return (
     <div className="App">
